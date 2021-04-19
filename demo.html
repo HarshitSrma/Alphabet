@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <input type="text" id="fild1" onkeydown="myFunction('f1')">
+    <br> <br> <br>
+
+    <input type="text" id="fild2" onchange="myFunction('f2')">
+    <br>
+
+    My Checkbox: <input id="myCheckbox" type="checkbox" /><br>
+
+    <script>
+        var checkboxVal = 0;
+        function myFunction(val) {
+            if (checkboxVal == 1) {
+                //checked therefore fill upperfield data in lower field
+                var field1Val = document.getElementById('fild1'); //
+                var field2Val = document.getElementById('fild2');
+                field2Val.value = field1Val.value;
+            } else {
+                //not checked therefore work normal
+
+            }
+
+        }
+
+
+        //this code is only detect checkbox value
+        //if checkbox is checked then it will replace upper field data in lower field
+        // otherwise make empty field
+
+        const checkbox = document.getElementById('myCheckbox')
+        checkbox.addEventListener('change', (event) => {
+            if (event.currentTarget.checked) {
+                //checked
+                checkboxVal = 1;
+                console.log('checkbox is checked');
+
+                //checked
+                var field1Val = document.getElementById('fild1');
+                var field2Val = document.getElementById('fild2');
+                field2Val.value = field1Val.value;
+
+            } else {
+                //not checked
+                checkboxVal = 0;
+                console.log('checkbox is not-checked');
+
+                //checked
+                var field1Val = document.getElementById('fild1');
+                var field2Val = document.getElementById('fild2');
+                field2Val.value = "";
+
+            }
+        })
+
+
+    </script>

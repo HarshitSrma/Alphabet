@@ -1,0 +1,221 @@
+<html>
+
+<body>
+    <form action="results.htm">
+        <fieldset id="billingAddress" class="text">
+            <legend>Billing Address</legend>
+            <label for="billFName">First Name</label>
+            <input id="billFName" name="BillingFirstName" type="text" required="required" />
+            <label for="billLName">Last Name</label>
+            <input id="billLName" name="BillingLastName" type="text" required="required" />
+            <label for="billStreet">Contact</label>
+            <input id="billStreet" name="BillingStreet" type="text" required="required" />
+            <label for="billCity">Address</label>
+            <input id="billCity" name="BillingCity" type="text" required="required" />
+            <label for="billState">State</label>
+            <select id="billState" name="BillingState" required="required">
+                <option value="Select State">Select State</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                <option value="Daman and Diu">Daman and Diu</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Puducherry">Puducherry</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+
+            </select>
+            <label for="billZip">Pin Code</label>
+            <input id="billZip" name="BillingZip" type="number" required="required" />
+            <label for="billPhone">Phone</label>
+            <input id="billPhone" name="BillingPhone" type="number" required="required" />
+            <div class="errorMessage"></div>
+        </fieldset>
+        <br>
+        <br>
+        <fieldset id="deliveryAddress" class="text">
+            <legend>Delivery Address</legend>
+            <div class="checks">
+                <input id="sameAddr" name="SameAddress" type="checkbox" />
+                <label for="sameAddr">same as billing address</label>
+            </div>
+            <label for="delivFName">First Name</label>
+            <input id="billFName" name="DeliveryFirstName" type="text" required="required" />
+            <label for="delivLName">Last Name</label>
+            <input id="delivLName" name="DeliveryLastName" type="text" required="required" />
+            <label for="delivStreet">Contact</label>
+            <input id="delivStreet" name="DeliveryStreet" type="text" required="required" />
+            <label for="delivCity">Address</label>
+            <input id="delivCity" name="DeliveryCity" type="text" required="required" />
+            <label for="delivState">State</label>
+            <select id="delivState" name="DeliveryState" required="required">
+                <option value="Select State">Select State</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                <option value="Daman and Diu">Daman and Diu</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Puducherry">Puducherry</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+
+            </select>
+            <label for="delivZip">Pin Code</label>
+            <input id="delivZip" name="DeliveryZip" type="number" required="required" />
+            <label for="delivPhone">Phone</label>
+            <input id="delivPhone" name="DeliveryPhone" type="number" required="required" />
+            <div class="errorMessage"></div>
+        </fieldset>
+    </form>
+
+
+    <!-- JS -->
+
+    <!-- <p id="Demo"> </p>
+    <script>
+        var x = getElementById("billingAddress").value; </script>
+    getElementById("Demo").innerHTML = 
+    </script> -->
+
+
+    <!-- If checkbox is checked then it will replace Delivery address same as Billing Address -->
+    <script>
+        (function () {
+
+            function copyBillingAddress() {
+                var billingInputElements = document.querySelectorAll("#billingAddress input");
+                var deliveryInputElements = document.querySelectorAll("#deliveryAddress input");
+                if (document.getElementById("sameAddr").checked) {
+                    for (var i = 0; i < billingInputElements.length; i++) {
+                        deliveryInputElements[i + 1].value = billingInputElements[i].value;
+                    }
+                    document.querySelector("#deliveryAddress select").value = document.querySelector("#billingAddress select").value;
+                } else {
+                    for (var i = 0; i < billingInputElements.length; i++) {
+                        deliveryInputElements[i + 1].value = "";
+                    }
+                    document.querySelector("#deliveryAddress select").selectedIndex = -1;
+                }
+            }
+
+            document.getElementById("sameAddr").addEventListener('change',
+                function () {
+                    copyBillingAddress();
+                }
+            );
+        })();
+
+
+    </script>
+
+
+    <script>
+       
+            var checkboxVal = 0;
+        function myFunction(val) {
+            if (checkboxVal == 1) {
+                //checked therefore fill upperfield data in lower field
+                var billFNameVal = document.getElementById('billFName');
+            var Val = document.getElementById('delivFName');
+            delivFNameVal.value = billFNameVal.value;
+            } else {
+                //not checked therefore work normal
+
+            }
+
+            }
+    
+    
+            //this code is only detect checkbox value
+            //if checkbox is checked then it will replace upper field data in lower field
+            // otherwise make empty field
+    
+            const checkbox = document.getElementById('Checkbox')
+        checkbox.addEventListener('change', (event) => {
+            if (event.currentTarget.checked) {
+                //checked
+                checkboxVal = 1;
+            console.log('checkbox is checked');
+
+            //checked
+            var billFNameVal = document.getElementById('billFName');
+            var delivFName = document.getElementById('delivFName');
+            delivFNameVal.value = billFNameVal.value;
+
+            } else {
+                //not checked
+                checkboxVal = 0;
+            console.log('checkbox is not-checked');
+
+            //checked
+            var billFNameVal = document.getElementById('billFName');
+            var delivFNameVal = document.getElementById('delivFName');
+            delivFNameVal.value = "";
+
+        }
+    })
+
+
+    </script>
+    
+
+
+</body>
+
+</html>

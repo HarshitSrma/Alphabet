@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h3>Billing Address</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    
+       
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="lname">Contact No.</label>
+    <input type="text" id="cno" name="contactno" placeholder="Your contact name..">
+
+    <label for="lname">Address</label>
+    <input type="text" id="address" name="address" placeholder="Your address..">
+
+    <label for="state">State</label>
+    <select onchange="val()" id="my_state" name="state">
+        <option value="selectPlaceholder">Select state</option>
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="lname">Pin Code</label>
+    <input type="text" id="pcode" name="pcode" placeholder="Your pin code..">
+
+    <label for="phoneno">Phone No</label>
+    <input type="text" id="phoneno" name="phoneno" placeholder="Your phone no..">
+
+
+    <h3>Contact Form</h3>
+
+
+    <!--CheckBox for Same Address-->
+    <div class="checks">
+        <input id="sameAddr" name="SameAddress" type="checkbox" />
+        <label for="sameAddr">same as billing address</label>
+    </div>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="lname">Contact No.</label>
+    <input type="text" id="cno" name="contactno" placeholder="Your contact name..">
+
+    <label for="lname">Address</label>
+    <input type="text" id="address" name="address" placeholder="Your address..">
+
+    <label for="state">State</label>
+    <select id="state" name="state">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="lname">Pin Code</label>
+    <input type="text" id="pcode" name="pcode" placeholder="Your pin code..">
+
+    <label for="phoneno">Phone No</label>
+    <input type="text" id="phoneno" name="phoneno" placeholder="Your phone no..">
+  
+    <input type="submit" value="Submit">
+</form>
+</div>
+
+<!-- JS for Same Address-->
+<script>
+    function val() {
+        d = document.getElementById("my_state").value;
+        if(d=='selectPlaceholder'){
+            alert("Sorry, you can't select this value");
+        }else{
+            console.log('State choosen sucessfully')
+        }
+       
+    }
+    </script>
+<script>
+    (function () {
+
+        function copyBillingAddress() {
+            var billingInputElements = document.querySelectorAll("#billingAddress input");
+            var deliveryInputElements = document.querySelectorAll("#deliveryAddress input");
+            if (document.getElementById("sameAddr").checked) {
+                for (var i = 0; i < billingInputElements.length; i++) {
+                    deliveryInputElements[i + 1].value = billingInputElements[i].value;
+                }
+                document.querySelector("#deliveryAddress select").value = document.querySelector("#billingAddress select").value;
+            } else {
+                for (var i = 0; i < billingInputElements.length; i++) {
+                    deliveryInputElements[i + 1].value = "";
+                }
+                document.querySelector("#deliveryAddress select").selectedIndex = -1;
+            }
+        }
+
+        document.getElementById("sameAddr").addEventListener('change',
+            function () {
+                copyBillingAddress();
+            }
+        );
+    })();
+</script>
+
+
+</body>
+</html>

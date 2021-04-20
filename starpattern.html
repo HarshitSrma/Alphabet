@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Star Pattern</title>
+</head>
+
+<body>
+
+    <script>
+        for (a = 1; a <= 10; a++) {
+            for (b = 1; b <= 50; b++) {
+                if (a==1){
+                    if(a==18||a==19){
+                        document.write("&nbsp;")
+                    }else{}
+                }
+                if ((a == 1 || a==5 || a == 10) ) {
+                    document.write("*");
+                }else{
+                    if(b==1|| b== 20 || b==30 || b==50){
+                        document.write("*");
+                    }else{
+                        document.write("&nbsp;&nbsp;");
+                    }if(a==5 && b<35 ){
+                        document.write("&nbsp;");
+                    }else{}
+                }
+                {
+//if()
+                }
+            } {
+                // document.write("*");
+            }
+            document.write("<br/>");
+        }
+    </script>
+</body>
+
+</html>

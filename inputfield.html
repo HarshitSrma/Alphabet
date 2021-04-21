@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Text Field document</title>
+</head>
+<title>Text Field document</title>
+
+<body>
+
+    <input type="text" id="ipfield" name="ipfield" value=""> <b>(Please enter Int only)</b><br><br>
+    <a href="#" id="filldetails" onclick="addFields()">Submit</a> <br><br>
+    <div id="container" />
+
+
+
+
+    <!--JS-->
+    <script type='text/javascript'>
+        function addFields() {
+            var x;
+            // Number of inputs to create
+            var number = document.getElementById("ipfield").value;
+
+            // Container <div> where dynamic content will be placed
+
+            var container = document.getElementById("container");
+
+            // Clear previous contents of the container
+            while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+            for (i = 0; i < number; i++) {
+
+                // Append a node with a random text
+
+                // Create an <input> element, set its type and name attributes
+                var input = document.createElement("input");
+                input.type = "text";
+                input.id = "input" + (i + 1);
+                input.name = "ipfield" + i;
+                x = document.createElement("button");
+                x.id = "button" + (i + 1);
+                var t = document.createTextNode("Delete");
+                x.appendChild(t);
+                x.onclick = function () {
+
+                    //container.removeChild(getElementById(input.id("input"+(i+1))).remove());
+                    var lastChar = this.id.substr(this.id.length - 1)
+                    document.getElementById("input" + lastChar).remove()
+                    document.getElementById("button" + lastChar).remove()
+
+                };
+
+                /* container.removeChild() */
+
+                container.appendChild(input);
+                container.appendChild(x);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+
+
+            }
+            //document.getElementById("input1").id;
+
+        }
+    </script>
+
+
+</body>
+
+</html>

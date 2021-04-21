@@ -1,0 +1,17 @@
+.FirstNo, .SecondNo{
+    border-radius: 5px;
+        width: 15%;
+        box-sizing: border-box;
+        margin: 20px;
+        border-radius: 5;
+}
+
+
+.add, .Substract, .multiply, .divide{
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
